@@ -15,7 +15,7 @@ export function GuestCheckDetailPage() {
     const { id = '' } = useParams();
 
     const guestCheckQuery = useGuestCheck(id);
-    const ordersQuery = useOrders(id);
+    const ordersQuery = useOrders({ guestCheckId: id });
 
     const guestCheck = guestCheckQuery.data;
     const orders = ordersQuery.data ?? [];

@@ -3,6 +3,7 @@ import { AppLayout } from "./components/layout/app-layout"
 import { CategoryPage } from "./components/pages/category-page"
 import { GuestCheckDetailPage } from "./components/pages/guest-check-detail-page"
 import { GuestCheckPage } from "./components/pages/guest-check-page"
+import { OrderKanbanPage } from "./components/pages/order-kanban-page"
 import { ProductPage } from "./components/pages/product-page"
 import { SpotPage } from "./components/pages/spot-page"
 
@@ -17,6 +18,7 @@ function App() {
         <Route path="/spots" element={<SpotPage />} />
         <Route path="/guest-checks" element={<GuestCheckPage />} />
         <Route path="/guest-checks/:id" element={<GuestCheckDetailPage />} />
+        <Route path="/orders" element={<OrderKanbanPage />} />
       </Route>
     </Routes>
   )

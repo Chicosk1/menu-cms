@@ -1,6 +1,6 @@
 import logomarca from '@/assets/logomarca.svg'
 import { cn } from '@/lib/utils'
-import { Armchair, ReceiptText, Sandwich, Tags } from 'lucide-react'
+import { Armchair, ReceiptText, Sandwich, SquareKanban, Tags } from 'lucide-react'
 import { NavLink } from 'react-router-dom'
 
 const menuItems = [
@@ -8,6 +8,7 @@ const menuItems = [
   { to: '/products', label: 'Produtos', icon: Sandwich },
   { to: '/spots', label: 'Mesas', icon: Armchair },
   { to: '/guest-checks', label: 'Comandas', icon: ReceiptText },
+  { to: '/orders', label: 'Pedidos', icon: SquareKanban },
 ]
 
 export function Sidebar() {

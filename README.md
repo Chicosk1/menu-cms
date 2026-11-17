@@ -2,7 +2,7 @@
 
 CMS (painel administrativo) do **Cardápio Digital**. Permite à equipe do restaurante gerenciar o cardápio consumindo a API NestJS do projeto [menu-backend](https://github.com/Chicosk1/menu-backend).
 
-Tecnologias: Vite, React, Tailwind CSS, shadcn/ui, Axios e TanStack Query (as mesmas do [menu-frontend](https://github.com/Chicosk1/menu-frontend)).
+Tecnologias: Vite, React, Tailwind CSS, shadcn/ui, Axios e TanStack Query (as mesmas do [menu-frontend](https://github.com/Chicosk1/menu-frontend)). O arrastar e soltar do Kanban usa o [@dnd-kit](https://dndkit.com).
 
 ## Funcionalidades
 
@@ -11,6 +11,7 @@ Tecnologias: Vite, React, Tailwind CSS, shadcn/ui, Axios e TanStack Query (as me
 - **Mesas**: listar, cadastrar, editar (nome e situação) e excluir (com confirmação).
 - **Comandas**: listar as comandas em aberto (mesa, data de abertura e total acumulado) e abrir o detalhe com os pedidos, seus itens, totais e status. As listas são atualizadas automaticamente a cada 30 segundos.
 - **Pedidos**: alterar o status de cada pedido (Novo, Em preparo, Pronto, Entregue) no detalhe da comanda, com transições livres entre os status.
+- **Kanban de pedidos**: uma coluna por status com os pedidos das comandas em aberto (mesa, itens e horário). Ao arrastar um cartão para outra coluna, o status é gravado na API.
 
 ## Pré-requisitos
 

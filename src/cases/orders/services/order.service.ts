@@ -1,13 +1,11 @@
 import { api } from "@/lib/axios";
-import type { OrderDTO, OrderStatus } from "../dtos/order.dto";
+import type { OrderDTO, OrderFilters, OrderStatus } from "../dtos/order.dto";
 
 const ENDPOINT = '/orders';
 
 export const OrderService = {
-    async listAll(guestCheckId?: string): Promise<OrderDTO[]> {
-        const result = await api.get<OrderDTO[]>(ENDPOINT, {
-            params: guestCheckId ? { guestCheckId } : undefined
-        });
+    async listAll(filters: OrderFilters = {}): Promise<OrderDTO[]> {
+        const result = await api.get<OrderDTO[]>(ENDPOINT, { params: filters });
         return result.data;
     },
 

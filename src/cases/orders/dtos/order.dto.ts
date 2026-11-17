@@ -1,4 +1,4 @@
-import type { GuestCheckDTO } from "@/cases/guest-checks/dtos/guest-check.dto";
+import type { GuestCheckDTO, GuestCheckStatus } from "@/cases/guest-checks/dtos/guest-check.dto";
 import type { ProductDTO } from "@/cases/products/dtos/product.dto";
 
 // Valores do enum OrderStatus da API
@@ -28,4 +28,9 @@ export interface OrderDTO {
     total: number | string;
     items: OrderItemDTO[];
     guestCheck: GuestCheckDTO;
+}
+
+export interface OrderFilters {
+    guestCheckId?: string;
+    guestCheckStatus?: GuestCheckStatus;
 }
