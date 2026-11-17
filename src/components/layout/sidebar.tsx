@@ -1,11 +1,12 @@
 import logomarca from '@/assets/logomarca.svg'
 import { cn } from '@/lib/utils'
-import { Sandwich, Tags } from 'lucide-react'
+import { Armchair, Sandwich, Tags } from 'lucide-react'
 import { NavLink } from 'react-router-dom'
 
 const menuItems = [
   { to: '/categories', label: 'Categorias', icon: Tags },
   { to: '/products', label: 'Produtos', icon: Sandwich },
+  { to: '/spots', label: 'Mesas', icon: Armchair },
 ]
 
 export function Sidebar() {
