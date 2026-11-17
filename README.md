@@ -7,6 +7,7 @@ Tecnologias: Vite, React, Tailwind CSS, shadcn/ui, Axios e TanStack Query (as me
 ## Funcionalidades
 
 - **Categorias**: listar, cadastrar, editar e excluir (com confirmação).
+- **Produtos**: listar (com preço em reais e indicadores de vegetariano e novidade), filtrar por categoria, cadastrar, editar e excluir (com confirmação).
 
 ## Pré-requisitos
 
@@ -46,7 +47,8 @@ Tecnologias: Vite, React, Tailwind CSS, shadcn/ui, Axios e TanStack Query (as me
 ```
 src/
 ├── cases/              # Um módulo por entidade (dtos, services, hooks, components)
-│   └── categories/
+│   ├── categories/
+│   └── products/
 ├── components/
 │   ├── layout/         # Layout e menu de navegação
 │   ├── pages/          # Páginas do CMS

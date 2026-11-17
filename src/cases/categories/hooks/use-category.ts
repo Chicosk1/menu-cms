@@ -36,6 +36,7 @@ export function useUpdateCategory() {
             CategoryService.update(id, category),
         onSuccess: () => {
             queryClient.invalidateQueries({ queryKey: QUERY_KEY });
+            queryClient.invalidateQueries({ queryKey: ['products'] });
             toast.success('Categoria atualizada com sucesso!');
         },
         onError: (error) => {
@@ -51,6 +52,7 @@ export function useDeleteCategory() {
         mutationFn: (id: string) => CategoryService.delete(id),
         onSuccess: () => {
             queryClient.invalidateQueries({ queryKey: QUERY_KEY });
+            queryClient.invalidateQueries({ queryKey: ['products'] });
             toast.success('Categoria excluída com sucesso!');
         },
         onError: (error) => {
