@@ -18,6 +18,7 @@ import {
 import { formatCurrency, formatTime } from "@/lib/format";
 import type { OrderDTO } from "../dtos/order.dto";
 import { OrderStatusBadge } from "./order-status-badge";
+import { OrderStatusSelect } from "./order-status-select";
 
 interface OrderCardProps {
     order: OrderDTO;
@@ -59,9 +60,15 @@ export function OrderCard({ order, title }: OrderCardProps) {
                 </Table>
             </CardContent>
 
-            <CardFooter className="justify-between border-t">
-                <span className="text-muted-foreground">Total do pedido</span>
-                <span className="text-base font-semibold text-brand">{formatCurrency(order.total)}</span>
+            <CardFooter className="flex-wrap justify-between gap-3 border-t">
+                <div className="flex items-center gap-2">
+                    <span className="text-muted-foreground">Status</span>
+                    <OrderStatusSelect order={order} />
+                </div>
+                <div className="flex items-center gap-2">
+                    <span className="text-muted-foreground">Total do pedido</span>
+                    <span className="text-base font-semibold text-brand">{formatCurrency(order.total)}</span>
+                </div>
             </CardFooter>
         </Card>
     )
