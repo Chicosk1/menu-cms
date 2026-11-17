@@ -9,6 +9,7 @@ Tecnologias: Vite, React, Tailwind CSS, shadcn/ui, Axios e TanStack Query (as me
 - **Categorias**: listar, cadastrar, editar e excluir (com confirmação).
 - **Produtos**: listar (com preço em reais e indicadores de vegetariano e novidade), filtrar por categoria, cadastrar, editar e excluir (com confirmação).
 - **Mesas**: listar, cadastrar, editar (nome e situação) e excluir (com confirmação).
+- **Comandas**: listar as comandas em aberto (mesa, data de abertura e total acumulado) e abrir o detalhe com os pedidos, seus itens, totais e status. As listas são atualizadas automaticamente a cada 30 segundos.
 
 ## Pré-requisitos
 
@@ -49,6 +50,8 @@ Tecnologias: Vite, React, Tailwind CSS, shadcn/ui, Axios e TanStack Query (as me
 src/
 ├── cases/              # Um módulo por entidade (dtos, services, hooks, components)
 │   ├── categories/
+│   ├── guest-checks/
+│   ├── orders/
 │   ├── products/
 │   └── spots/
 ├── components/
